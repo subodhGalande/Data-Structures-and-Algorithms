@@ -1,3 +1,5 @@
+//code to check if a given string is anagram
+
 function checkAnagram(str1, str2) {
   if (str1.length !== str2.length) {
     console.log("length is not same");
