@@ -10,4 +10,4 @@ function countUniqueValues(arr) {
   console.log(Object.keys(frequencyCounter).length);
 }
 
-countUniqueValues([1, 1, 1, 2, 2, 3, 4, 5, 6, 6]);
+countUniqueValues([1, 1, 1, 2, 2, 3, 4, 5, 6, 6, 1, 2, 3, 4]);

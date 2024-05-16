@@ -1,4 +1,4 @@
-//count unique values using multipointer method
+//count unique values using multipointer method with sorted array
 
 function countUniqueValues(arr) {
   if (arr.length === 0) return 0;
