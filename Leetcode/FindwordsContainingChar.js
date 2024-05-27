@@ -10,4 +10,4 @@ var findWordsContaining = function (words, x) {
   return index;
 };
 
-findWordsContaining(["leet", "code", "then", "dun", "hen"], "e");
+findWordsContaining(["carrot", "apple", "litchi", "orange"], "a");
