@@ -8,8 +8,8 @@ selectionSort = (arr) => {
         lowest = j;
       }
     }
-    console.log(i, lowest);
 
+    console.log(i, lowest);
     if (i !== lowest) {
       [arr[i], arr[lowest]] = [arr[lowest], arr[i]];
     }
