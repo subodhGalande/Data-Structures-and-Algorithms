@@ -72,6 +72,27 @@ class DoublyLinkedList {
     this.length++;
     return this;
   }
+
+  Get(index) {
+    if (index < 0 || index >= this.length) return null;
+    let current, counter;
+    if (index <= this.length / 2) {
+      current = this.head;
+      counter = 0;
+      while (counter !== index) {
+        current = current.next;
+        counter++;
+      }
+    } else {
+      current = this.tail;
+      counter = this.length - 1;
+      while (counter !== index) {
+        current = current.prev;
+        counter--;
+      }
+    }
+    return current;
+  }
 }
 
 let list = new DoublyLinkedList();
@@ -82,3 +103,4 @@ list.Push("hello");
 // list.Shift();
 // list.Shift();
 list.Unshift("I am Ron");
+list.Get(3);
