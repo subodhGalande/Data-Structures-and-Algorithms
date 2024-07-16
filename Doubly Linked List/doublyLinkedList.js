@@ -42,10 +42,43 @@ class DoublyLinkedList {
     this.length--;
     return currentTail;
   }
+
+  Shift() {
+    if (this.length === 0) return undefined;
+    let oldHead = this.head;
+    if (this.length == 1) {
+      this.head = null;
+      this.tail = null;
+    } else {
+      this.head = oldHead.next;
+      this.head.prev = null;
+      oldHead.next = null;
+    }
+
+    this.length--;
+    return oldHead;
+  }
+
+  Unshift(val) {
+    let newNode = new Node(val);
+    if (this.length == 0) {
+      this.head = newNode;
+      this.tail = this.head;
+    } else {
+      newNode.next = this.head;
+      this.head.prev = newNode;
+      this.head = newNode;
+    }
+    this.length++;
+    return this;
+  }
 }
 
 let list = new DoublyLinkedList();
 list.Push("hey");
 list.Push("there");
 list.Push("hello");
-list.Pop();
+// list.Pop();
+// list.Shift();
+// list.Shift();
+list.Unshift("I am Ron");
