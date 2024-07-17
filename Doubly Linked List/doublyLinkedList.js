@@ -93,14 +93,63 @@ class DoublyLinkedList {
     }
     return current;
   }
+
+  Set(index, val) {
+    let getter = this.Get(index);
+    if (getter != null) {
+      getter.val = val;
+      return true;
+    }
+    return false;
+  }
+
+  Insert(index, val) {
+    if (index < 0 || index >= this.length) return false;
+    if (index === 0) this.Unshift(val);
+    if (index === this.length) this.Push(val);
+    let newNode = new Node(val);
+    let oldNode = this.Get(index);
+    newNode.next = oldNode;
+    newNode.prev = oldNode.prev;
+    oldNode.prev = newNode;
+    newNode.prev.next = newNode;
+    this.length++;
+    return true;
+  }
+
+  Remove(index) {
+    if (index < 0 || index >= this.length) return undefined;
+    if (index === 0) return this.Shift();
+    if (index === this.length - 1) return this.Pop();
+
+    let removedNode = this.Get(index);
+    let beforeNode = removedNode.prev;
+    let afterNode = removedNode.next;
+
+    beforeNode.next = afterNode;
+    afterNode.prev = beforeNode;
+
+    removedNode.next = null;
+    removedNode.prev = null;
+
+    this.length--;
+    return removedNode;
+  }
 }
 
 let list = new DoublyLinkedList();
 list.Push("hey");
 list.Push("there");
 list.Push("hello");
+list.Push("Ron");
+list.Push("Harry");
+list.Remove(3);
+console.log(list);
 // list.Pop();
 // list.Shift();
 // list.Shift();
-list.Unshift("I am Ron");
-list.Get(3);
+// list.Unshift("I am Ron");
+// list.Get(3);
+// list.Set(3, "hello is now hi");
+// list.Get(3);
+// list.Insert(3, "200");
