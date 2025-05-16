@@ -69,6 +69,5 @@ const hashmap = new hashTable(50);
 hashmap.set('name', 'john');
 hashmap.set('age', 25);
 hashmap.set('city', 'london');
-
 hashmap.remove("name")
 hashmap.display();
