@@ -10,7 +10,7 @@ function removeDuplicates(nums) {
       k++;
     }
   }
-
+console.log(k)
   return k;
 }
 
