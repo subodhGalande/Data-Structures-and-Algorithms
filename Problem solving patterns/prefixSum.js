@@ -10,4 +10,4 @@ function prefixSum(arr){
 
 }
 
-prefixSum([2,4,5,6,7])
+prefixSum([-2, 2, -3, 1])
