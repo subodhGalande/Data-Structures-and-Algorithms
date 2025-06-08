@@ -1,4 +1,4 @@
-//anagram checker with subtracting letter frequency
+//anagram checker with subtracting letter frequency leetcode
 
 function Anagram(first, second) {
   if (first.length !== second.length) {
