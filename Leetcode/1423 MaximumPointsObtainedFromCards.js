@@ -32,6 +32,8 @@ function maxScore(cardPoints, k) {
   console.log("🚀 ~ maxScore ~ rsum:", rsum);
   console.log("🚀 ~ maxScore ~ lsum:", lsum);
   console.log("🚀 ~ maxScore ~ maxsum:", maxsum);
+
+  return maxsum;
 }
 
 maxScore([1, 2, 3, 4, 5, 6, 1], 3);
