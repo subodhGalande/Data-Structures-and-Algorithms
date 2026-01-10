@@ -24,7 +24,7 @@ function checkAnagram(str1, str2) {
     if (!(key in frequencyCounter2)) {
       console.log("matching letters not present in given string");
       return false;
-    }
+    } 
     if (frequencyCounter2[key] !== frequencyCounter1[key]) {
       console.log(" letters frequency does not match in given string");
       return false;
