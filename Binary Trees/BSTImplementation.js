@@ -167,6 +167,7 @@ bst.insert(15);
 bst.insert(3);
 bst.insert(7);
 bst.levelOrder(bst.root);
+console.log(bst.preOrder(bst.root));
 bst.delete(10);
 console.log("_______");
 bst.levelOrder(bst.root);
