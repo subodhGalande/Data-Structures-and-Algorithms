@@ -93,12 +93,26 @@ class BinarySearchTree {
     }
   }
 
+  /**
+   * Level Order Traversal (Breadth-First Search - BFS)
+   * Visits nodes level by level, starting from the root.
+   */
   levelOrder() {
+    // If the tree is empty, there is nothing to traverse
+    if (!this.root) return;
+
+    // Use a queue (FIFO - First In First Out) to keep track of nodes to visit
     let queue = [];
-    queue.push(this.root);
+    queue.push(this.root); // Start with the root node
+
     while (queue.length) {
+      // 1. Remove the first node from the queue
       let curr = queue.shift();
+
+      // 2. Process the node (e.g., print its value)
       console.log(curr.value);
+
+      // 3. Add the children to the queue to be processed in the next "level"
       if (curr.left) {
         queue.push(curr.left);
       }
@@ -166,8 +180,8 @@ bst.insert(5);
 bst.insert(15);
 bst.insert(3);
 bst.insert(7);
-bst.levelOrder(bst.root);
+bst.levelOrder();
 console.log(bst.preOrder(bst.root));
 bst.delete(10);
 console.log("_______");
-bst.levelOrder(bst.root);
+bst.levelOrder();
