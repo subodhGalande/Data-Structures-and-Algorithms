@@ -28,7 +28,7 @@ var deleteNode = function (root, key) {
   } else if (root.val < key) {
     root.right = deleteNode(root.right, key);
   } else {
-    //edge case 1: if node is a leaf node
+    //edge case 1: if node is a leaf node or left or right node
     if (root.left === null) return root.right;
     if (root.right === null) return root.left;
     //edge case 3: if above condition fails now we have two child values, we will now get the inorder successor from the tree
