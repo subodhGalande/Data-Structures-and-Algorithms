@@ -30,3 +30,22 @@ var hasPathSum = function (root, targetSum) {
   return hasPathSum(root.left, remaining) || hasPathSum(root.right, remaining);
 };
 // @lc code=end
+
+// if (!root) return false;
+
+// function dfs(node, currentSum) {
+//   if (!node) return false;
+
+//   // Add current node value
+//   currentSum += node.val;
+
+//   // If leaf node → check condition
+//   if (!node.left && !node.right) {
+//     return currentSum === targetSum;
+//   }
+
+//   // Otherwise explore children
+//   return dfs(node.left, currentSum) || dfs(node.right, currentSum);
+// }
+
+// return dfs(root, 0);
