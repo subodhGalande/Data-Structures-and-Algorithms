@@ -16,11 +16,10 @@ var firstUniqChar = function (s) {
     map.set(c, (map.get(c) || 0) + 1);
   }
 
-  for (let [key, val] of map) {
-    if (val === 1) {
-      return s.indexOf(key);
-    }
+  for (let i = 0; i < s.length; i++) {
+    if (map.get(s[i]) === 1) return i;
   }
+
   return -1;
 };
 // @lc code=end
