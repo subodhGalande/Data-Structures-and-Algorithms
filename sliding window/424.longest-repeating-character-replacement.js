@@ -31,3 +31,23 @@ var characterReplacement = function (s, k) {
   return best;
 };
 // @lc code=end
+
+//freq method
+// //  const idx = c => c.charCodeAt(0) - 65
+//     let freq = new Array(26).fill(0)
+//     let maxFreq = 0, maxLen = 0, l = 0
+
+//    for( let r = 0; r < s.length; r++){
+//      freq[idx(s[r])]++;
+
+//      maxFreq = Math.max(maxFreq, freq[idx(s[r])])
+
+//      if((r - l + 1) - maxFreq > k){
+//         freq[idx(s[l])]--;
+//         l++
+//      }
+
+//      maxLen = Math.max(maxLen, r - l + 1)
+//    }
+
+//     return maxLen
